@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsureSafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='front_page.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <img src="static/insuresafe.png" class="rounded float-start" alt="logo-image" height="40px"
+                            width="90px" padding-top="20px">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#txt" role="button">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#txt2" role="button">
+                            How it works
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#fi" role="button">
+                            Why InsureSafe?
+                        </a>
+                    </li>
+
+                    <!-- <li class="start">
+                <button type="button" class="btn btn-danger" style="text-decoration: none;"><a id="getstarted" style="text-decoration: none;" href="index.html">Get Started</a></button>
+              </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pg1">
+        <span class="pg1-left"><img class="p1img" src="static/plane.png" alt="" height="80%" width="100%" srcset=""></span>
+        <span class="pg1-right">
+            <div class="s1">
+                <h1>Health Insurance Frauds <br>can now be detected easily!</h1>
+            </div>
+            <div class="s2">
+                <button type="button" class="btn btn-warning" style="text-decoration: none;"><a id="getstarted"
+                        style="text-decoration: none;" href="{{url_for('index')}}">Get Started</a></button>
+            </div>
+
+        </span>
+
+    </div>
+
+    <div class="pg2" id="txt">
+        <div class="abt">
+            <h1>About Us</h1>
+        </div>
+        <div class="pg2_main">
+            <span class="pg2-left">
+                <h5 class="text2">Protect your health and finances with our advanced health insurance fraud detection website.
+                    We use cutting-edge technology to identify and prevent fraudulent claims, ensuring that your insurance
+                    coverage is secure and reliable. By analyzing claims,data and identifying anomalies, insurance companies can identify potential fraud and take
+                    appropriate action to prevent it. This not only protects the insurance company from financial losses but also
+                    ensures that healthcare resources are used efficiently and effectively. Stay one step ahead of scammers and safeguard your well-being with our comprehensive and user-friendly platform
+                    .</h5>
+            </span>
+            <span class="pg2-right"><img class="p1img" src="static/binocular.png" alt="" height="80%" width="80%"
+                    srcset=""></span>
+        </div>
+    </div>
+    <span id="txt2"></span>
+    <div class="pg3" id="txt2">
+        <div class="abt2">
+            <h1>How our model works:</h1>
+        </div>
+        <div class="text3">
+            <h5>
+                The health insurance fraud detection model uses machine learning algorithms to analyze large volumes of
+                health insurance data and identify patterns that indicate potential fraudulent activity. Here is an
+                overview of how such a model typically works:
+                <br><br>
+                1.<br> Data collection: The model collects and consolidates data from various sources, such as claims
+                data, provider data, member data, and third-party data. The data may include information on diagnosis
+                codes, procedure codes, treatment history, patient demographics, billing codes, and more.
+                <br><br>
+                2.<br> Data preprocessing: The model cleans and preprocesses the data to make it usable for analysis.
+                This may involve data cleaning, data normalization, data transformation, and feature engineering.
+                <br><br>
+                3.<br> Feature selection: The model selects the most relevant features from the data to use for
+                analysis. This is important to ensure that the model focuses on the most important factors for fraud
+                detection.
+                <br><br>
+                4.<br> Model training: The model uses machine learning algorithms, such as logistic regression, decision
+                trees, or neural networks, to learn from the labeled data. Labeled data includes examples of both
+                fraudulent and non-fraudulent claims. The model adjusts its parameters and learns from the labeled data
+                to improve its performance.
+                <br><br>
+                5.<br> Model validation: The model is tested on a separate dataset to evaluate its performance. This
+                helps to ensure that the model is not overfitting to the training data and can generalize well to new
+                data.
+                <br><br>
+                6.<br> Fraud detection: Once the model is validated, it can be used to detect fraudulent claims in
+                real-time.
+                <br><br>
+                7.<br> Investigation and resolution: If a claim is flagged, investigators can review the claim and
+                investigate further to determine if fraud has occurred. If fraud is detected, appropriate actions can be
+                taken, such as denying the claim, recovering funds, or pursuing legal action.
+                <br><br>
+                Overall, the health insurance fraud detection model uses machine learning algorithms to analyze large
+                volumes of data and identify patterns that indicate potential fraudulent activity. By flagging
+                suspicious claims for investigation, the model can help prevent fraudulent activity and save insurers
+                and customers significant amounts of money.
+            </h5>
+
+        </div>
+
+    </div>
+
+    <div class="pg4" id="fi">
+        <div style="padding-top: 3%; padding-left: 5%;">
+            <h1>Why InsureSafe?</h1>
+        </div>
+        <div class="pg4_main"><span class="pg4-left">
+                <h4>
+                    Health Insurance frauds seem scary? We're here to put you at ease.<br>
+                    With InsureSafe, we help identify and prevent fraudulent activities, protect patients' rights and benefits, and
+                    ensure that healthcare resources are used appropriately and efficiently.
+                </h4>
+            </span>
+            <span class="pg4-right"><img class="p1img" src="ghost.png" alt="" height="80%" width="80%" srcset=""></span>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
